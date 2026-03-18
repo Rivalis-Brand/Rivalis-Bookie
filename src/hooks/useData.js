@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { getNBAData } from "../services/dataService";
-import { rank } from "../engine/baseEngine";
+import { getAllSportsData } from "../services/dataService";
 
 export default function useData() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   async function load() {
-    const raw = await getNBAData();
-    setData(rank(raw));
+    const result = await getAllSportsData();
+    setData(result);
   }
 
   useEffect(() => {
