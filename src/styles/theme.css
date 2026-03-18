@@ -1,0 +1,12 @@
+body {
+  background: radial-gradient(circle at top, #1a0000, #050505);
+  color: white;
+}
+
+.card {
+  background: #111;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,0,0,0.3);
+}
